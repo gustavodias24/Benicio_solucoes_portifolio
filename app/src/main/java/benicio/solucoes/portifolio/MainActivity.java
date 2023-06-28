@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         b.setPositiveButton("Ok", (dialog, which) -> {
             somClick.start();
             editor.putBoolean("isAvalia", true);
-            editor.commit();
+            editor.apply();
             String linkApp = "https://play.google.com/store/apps/details?id=benicio.solucoes.portifolio";
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(linkApp)));
         });
